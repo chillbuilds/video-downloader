@@ -26,3 +26,12 @@ a {
 #video {
     margin: 20px;
 }
+
+#thumb {
+    width: 200px;
+    margin-bottom: 40px;
+}
+
+.text {
+    text-align: right;
+}

@@ -1,4 +1,4 @@
-var inputURL = "https://www.youtube.com/watch?v=cCheeOT5btU";
+var inputURL = "https://www.youtube.com/watch?v=S5l7GNJaorU";
 var resp = "";
 var settings = {
   async: true,
@@ -17,8 +17,11 @@ $.ajax(settings).then(function(response) {
   resp = response;
     $("#title").text(resp.title);
     $("#uploader").text(resp.uploader);
+    $("#thumb").attr("src", resp.thumbnail);
+    $("#audio").text("Audio");
+    $("#video").text("Video");
   for (i = 0; i < resp.streams.length; i++) {
-      if(resp.streams[i].has_audio && resp.streams[i].has_video && resp.streams[i].extension == "mp4"){     
+      if(resp.streams[i].has_audio && resp.streams[i].has_video && resp.streams[i].extension !== "webm"){     
     var x = $("<a>");
     x.addClass("URL");
     x.attr("href", resp.streams[i].url)
