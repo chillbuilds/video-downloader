@@ -1,0 +1,28 @@
+#mainBody {
+    margin-top: 40px;
+}
+
+#test {
+    font-size: 22px;
+    padding: 20px;
+}
+
+.URL {
+    margin: 10px;
+    padding: 20px;
+    background: royalblue;
+    border-radius: 4px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(152, 166, 180);
+}
+
+#audio {
+    margin: 20px;
+}
+
+#video {
+    margin: 20px;
+}
