@@ -2,6 +2,7 @@ var inputURL = "";
 var resp = "";
 
 function ajaxCall() {
+  inputURL = $("#urlInput").val();
   var settings = {
     async: true,
     crossDomain: true,
@@ -44,13 +45,15 @@ function ajaxCall() {
         $("#audio").append(x);
       }
     }
+    $("#urlInput").val("");
   });
 }
 
 $(document).on("keyup", function(event) {
   var k = event.which;
   if (k === 13) {
-    inputURL = $("#urlInput").val();
     ajaxCall();
   }
 });
+
+$("#search").on("click", ajaxCall);
